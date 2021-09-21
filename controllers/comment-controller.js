@@ -18,6 +18,7 @@ const commentController = {
           res.status(404).json({ message: "No Pizza found with this id." });
           return;
         }
+        res.json(dbPizzaData);
       })
       .catch((err) => res.json(err));
   },
